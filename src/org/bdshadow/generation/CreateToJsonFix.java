@@ -58,14 +58,14 @@ public class CreateToJsonFix extends BaseCreateMethodsFix<DartComponent> {
             boolean isGenericCollection = typeText.startsWith("Set") || typeText.startsWith("List");
             if (isGenericCollection) {
                 template.addTextSegment("jsonEncode(");
-                template.addTextSegment("this.");
+//                template.addTextSegment("this.");
                 template.addTextSegment(component.getName());
                 template.addTextSegment(")");
                 template.addTextSegment(",");
                 continue;
             }
 
-            template.addTextSegment("this.");
+//            template.addTextSegment("this.");
             switch (typeText) {
                 case "DateTime": {
                     template.addTextSegment(component.getName());
